@@ -19,8 +19,8 @@ Usage
 			The remote url named 'awesome' doesn't exist
 			try:
 				gitopen --repo origin
+				gitopen --repo heroku
 				gitopen --repo gitbucket
-				gitopen --repo hero
 		#in case of error it will output all your git remote name
 
 

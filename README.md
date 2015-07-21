@@ -16,8 +16,8 @@ Whitin your git repository folder type the command line 'gitopen' to pen you git
 			The remote url named 'awesome' doesn't exist
 			try:
 				gitopen --repo origin
+				gitopen --repo heroku
 				gitopen --repo gitbucket
-				gitopen --repo hero
 		#in case of error it will output all your git remote name
 ```
 
