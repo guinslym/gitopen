@@ -4,3 +4,4 @@ gitopen todo list:
  ☐ Check if there is a file~/home/user/.gitopen that specify the default broser to use
  ☐ line 64: instead of default origin... If there is a remote url that is not named 'origin' take it as default instead: line 62 : 'url = content.get(repo, None)'
  ☐ Add alias to 'gitopen --repo' : 'gitopen --remote'
+   ☐ It seems that 'gitopen --remote' is more meaningful than 'gitopen --repo'
