@@ -3,3 +3,4 @@ gitopen todo list:
      ☐ ex: google-chrome [your git remote url] or for mac 'open [your git remote url]'
  ☐ Check if there is a file~/home/user/.gitopen that specify the default broser to use
  ☐ line 64: instead of default origin... If there is a remote url that is not named 'origin' take it as default instead: line 62 : 'url = content.get(repo, None)'
+ ☐ Add alias to 'gitopen --repo' : 'gitopen --remote'

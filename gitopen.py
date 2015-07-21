@@ -54,7 +54,7 @@ def hash_of_content(content):
 @click.option('--repo', default='origin',
         help='Open a selected repo')
 def cli(repo):
-    """This scripts repo default repo"""
+    """This scripts open in your the given remote name"""
     content = read_config_file()
     if content == False:
         return 0
@@ -69,3 +69,25 @@ def cli(repo):
         click.echo('try:')
         for i in content.keys():
             click.echo("\tgitopen --repo "+t.green(i))
+
+'''
+@click.command()
+@click.option('--remote', default='origin',
+        help='Open a selected repo, alias of gitopen --repo')
+def cli(remote):
+    """Alias of git"""
+    content = read_config_file()
+    if content == False:
+        return 0
+    content = hash_of_content(content)
+    url = content.get(remote, None)
+    if url:
+        click.echo('{0}'.format(url))
+        webbrowser.open_new_tab(url)
+    else:
+        #Print error message
+        click.echo("The remote url named " + t.red("'{0}'").format(remote) + " doesn't exist".format(remote))
+        click.echo('try:')
+        for i in content.keys():
+            click.echo("\tgitopen --remote "+t.green(i)) 
+'''
