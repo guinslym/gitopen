@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages # Always prefer setuptools over distutils
 
 setup(
     name= 'Gitopen',
