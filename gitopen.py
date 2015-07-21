@@ -25,8 +25,9 @@ def hash_of_content(content):
     repo_name=[]
     repo_url=[]
     for line in content:
-        if re.findall(r'"(.*?)"', line):
-            repo_name.append(re.findall(r'"(.*?)"', line)[0])
+        if 'remote' in line:
+            if re.findall(r'"(.*?)"', line):
+                repo_name.append(re.findall(r'"(.*?)"', line)[0])
         if 'url = ' in line:
             #https://git.heroku.com/darrasbusiness.git
             if 'heroku' in line:
