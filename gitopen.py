@@ -65,7 +65,7 @@ def cli(repo):
         webbrowser.open_new_tab(url)
     else:
         #Print error message
-        click.echo("The repo named " + t.red("'{0}'").format(repo) + " is not in your git config file".format(repo))
+        click.echo("The remote url named " + t.red("'{0}'").format(repo) + " doesn't exist".format(repo))
         click.echo('try:')
         for i in content.keys():
             click.echo("\tgitopen --repo "+t.green(i))

@@ -8,20 +8,20 @@ Usage
 
 ::
 
-			$ gitopen
-			#this will open in your browser
-			#the default repo is origin
+		$ gitopen
+		#this will open in your browser
+		#the default remote name is origin
 
-			$ gitopen --repo [repo name]
-			# The default repo is origin
+		$ gitopen --repo [remote name]
+		# The default name is origin
 
-			$ gitopen --repo awesome
-				The repo named 'awesome' is not in your git config file
-				try:
-					gitopen --repo origin
-					gitopen --repo gitbucket
-					gitopen --repo hero
-			#in case of error it will output all your git remote name
+		$ gitopen --repo awesome
+			The remote url named 'awesome' doesn't exist
+			try:
+				gitopen --repo origin
+				gitopen --repo gitbucket
+				gitopen --repo hero
+		#in case of error it will output all your git remote name
 
 
 Todo
