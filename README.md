@@ -2,6 +2,10 @@
 
 Whitin your git repository folder type the command line 'gitopen' to pen you git remote url in your  browser.
 
+###Installation
+
+`pip install gitopen` or 
+`pip install --upgrade gitopen`
 
 ###Usage
 ```
