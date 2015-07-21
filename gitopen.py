@@ -28,17 +28,23 @@ def hash_of_content(content):
         if re.findall(r'"(.*?)"', line):
             repo_name.append(re.findall(r'"(.*?)"', line)[0])
         if 'url = ' in line:
-            #git@github.com:guinslym/myrepo.git
-            index1 = line.index('@')
-            repo_value = line[index1+1:]
-            #github.com:guinslym/myrepo.git
-            repo = repo_value.replace(':','/')
-            #github.com/guinslym/myrepo.git
-            index2 = repo.rfind('.')
-            repo = repo[:index2]
-            #github.com/guinslym/myrepo
-            repo_url.append('https://'+repo.strip())
-            #https://github.com/guinslym/myrepo
+            #https://git.heroku.com/darrasbusiness.git
+            if 'heroku' in line:
+                line = line.split('url = ')[1]
+                line = line.split('.git')[0]
+                repo_url.append(line)
+            else:
+                #git@github.com:guinslym/myrepo.git
+                index1 = line.index('@')
+                repo_value = line[index1+1:]
+                #github.com:guinslym/myrepo.git
+                repo = repo_value.replace(':','/')
+                #github.com/guinslym/myrepo.git
+                index2 = repo.rfind('.')
+                repo = repo[:index2]
+                #github.com/guinslym/myrepo
+                repo_url.append('https://'+repo.strip())
+                #https://github.com/guinslym/myrepo
     #print(repo_name) => ['origin', 'heroku', 'gitbucket']
     content ={}
     for i in repo_name:

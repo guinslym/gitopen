@@ -2,7 +2,7 @@ from setuptools import setup, find_packages # Always prefer setuptools over dist
 
 setup(
     name= 'Gitopen',
-    version='1.2',
+    version='1.2.1',
     description="Open your git-remote url in your browser",
     url='https://github.com/guinslym/gitopen',
     author='Guinslym',
