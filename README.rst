@@ -15,7 +15,7 @@ Usage
 			$ gitopen --repo [repo name]
 			# The default repo is origin
 
-			$ -> % gitopen --repo awesome
+			$ gitopen --repo awesome
 				The repo named 'awesome' is not in your git config file
 				try:
 					gitopen --repo origin
